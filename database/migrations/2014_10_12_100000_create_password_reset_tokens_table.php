@@ -13,11 +13,11 @@ return new class extends Migration
     {
         $this->down();
         Schema::create('password_reset_tokens', function (Blueprint $table) {
+            $table->uuid('id')->primary();
             $table->string('email');
             $table->string('token');
             $table->timestamp('created_at')->nullable();
-            $table->primary(['email', 'token']);
-        });      
+        });
     }
 
     /**
