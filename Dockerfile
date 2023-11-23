@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     unzip \ 
     libzip-dev
 
-# Instala o Composer
+# Comando para instalar o Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN docker-php-ext-install pdo_mysql zip bcmath mbstring
 
