@@ -1,3 +1,5 @@
+# Ignorar arquivos e pastas geradas ou relacionadas ao ambiente de desenvolvimento
+
 /.phpunit.cache
 /node_modules
 /public/build
@@ -17,8 +19,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/vendor/
-node_modules/
 npm-debug.log
 yarn-error.log
 
