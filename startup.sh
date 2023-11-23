@@ -2,7 +2,6 @@ cp /home/default /etc/nginx/sites-enabled/default
 
 cp /home/php.ini /usr/local/etc/php/conf.d/php.ini
 
-
 # install support for webp file conversion
 apt-get update --allow-releaseinfo-change && apt-get install -y libfreetype6-dev \
                 libjpeg62-turbo-dev \
