@@ -20,7 +20,13 @@ service supervisor restart
 
 php /home/site/wwwroot/artisan down --refresh=15 --secret="1630542a-246b-4b66-afa1-dd72a4c43515"
 
-php /home/site/wwwroot/artisan migrate --force
+# Check if the seed already exists
+if [ "$(php /home/site/wwwroot/artisan db:seed --class=CheckMigrationSeed --quiet)" == "Seed completed successfully." ]; then
+    echo "Migrations already applied. Skipping..."
+else
+    # Run migrations
+    php /home/site/wwwroot/artisan migrate --force
+fi
 
 # Clear caches
 php /
