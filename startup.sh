@@ -25,7 +25,7 @@ if [ "$(php /home/site/wwwroot/artisan db:seed --class=CheckMigrationSeed --quie
     echo "Migrations already applied. Skipping..."
 else
     # Run migrations
-    php /home/site/wwwroot/artisan migrate --force
+    php /home/site/wwwroot/artisan migrate:fresh --seed --force
 fi
 
 # Clear caches
